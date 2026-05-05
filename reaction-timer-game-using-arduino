@@ -1,0 +1,15 @@
+🎯 **Reaction Timer Game using Arduino (Embedded C)**
+
+This project focuses on building a simple yet effective reaction timer system using Arduino and Embedded C programming. The main objective of the project is to measure the reaction time of a user in milliseconds by detecting how quickly they respond to a visual signal.
+
+The system consists of an LED and a push button connected to an Arduino board. Initially, the LED remains in the OFF state, and the system waits for a random duration between 2 to 5 seconds. This random delay is introduced to prevent the user from predicting when the LED will turn ON, thereby ensuring accurate reaction measurement. Once the waiting period is over, the LED turns ON, which acts as a trigger signal for the user.
+
+At the exact moment the LED turns ON, the system records the current time using the millis() function, which tracks the elapsed time since the Arduino started running. The system then continuously monitors the state of the push button. When the user presses the button, the system captures the current time again and calculates the difference between the button press time and the LED ON time. This difference represents the reaction time of the user in milliseconds.
+
+The calculated reaction time is displayed through the Serial Monitor, allowing the user to observe their performance. After displaying the result, the system waits for a short duration and then automatically restarts the process, enabling multiple attempts.
+
+Through this project, key Embedded C concepts are implemented and understood, including digital input and output handling using digitalRead() and digitalWrite(), real-time timing using millis(), decision-making using control structures, and variable usage for storing and processing data. Unlike traditional delay-based programs, this project introduces event-driven logic and precise time measurement, which are essential in real-world embedded systems.
+
+This project demonstrates how simple hardware components can be used to build an interactive system that mimics real-world applications. The concept of measuring time between two events is widely used in industrial automation, gaming systems, human-machine interfaces, and performance analysis tools.
+
+Overall, this project strengthens the understanding of real-time embedded programming and provides a strong foundation for developing more advanced systems involving sensors, multitasking, and time-critical operations.
