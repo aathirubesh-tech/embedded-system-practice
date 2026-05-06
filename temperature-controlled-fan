@@ -1,0 +1,55 @@
+# 🌡️ Smart Temperature Controlled Fan (Arduino)
+
+## 📌 Project Description
+This project controls a fan automatically based on temperature using a TMP36 sensor and Arduino.
+
+## 💡 Concept
+- Reads temperature from sensor
+- Converts analog value to voltage
+- Converts voltage to temperature (°C)
+- Controls motor speed using PWM
+
+## ⚙️ Components Used
+- Arduino UNO
+- TMP36 Temperature Sensor
+- DC Motor
+- Transistor
+- Resistor
+
+## 🔌 Working
+- Temperature > 30°C → Fan runs at full speed
+- Temperature > 25°C → Medium speed
+- Temperature < 25°C → Fan OFF
+
+## 🧠 What I Learned
+- Sensor Interfacing
+- ADC (Analog to Digital Conversion)
+- Data Conversion (Voltage → Temperature)
+- PWM motor control
+- Debugging errors
+
+## 💻 Code
+```c
+int tempPin = A0;
+int motorPin = 9;
+
+void setup() {
+  pinMode(motorPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = analogRead(tempPin);
+  float voltage = sensorValue * (5.0 / 1023.0);
+  float temperature = (voltage - 0.5) * 100;
+
+  if (temperature > 30) {
+    analogWrite(motorPin, 255);
+  } else if (temperature > 25) {
+    analogWrite(motorPin, 150);
+  } else {
+    analogWrite(motorPin, 0);
+  }
+
+  delay(1000);
+}
