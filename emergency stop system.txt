@@ -1,0 +1,34 @@
+int led = 13;
+int button = 2;
+
+volatile bool stopFlag = false;
+
+void setup()
+{
+  pinMode(led, OUTPUT);
+
+  pinMode(button, INPUT);
+
+  attachInterrupt(
+    digitalPinToInterrupt(button),
+    emergencyStop,
+    RISING
+  );
+}
+
+void loop()
+{
+  if(stopFlag == false)
+  {
+    digitalWrite(led, HIGH);
+    delay(500);
+
+    digitalWrite(led, LOW);
+    delay(500);
+  }
+}
+
+void emergencyStop()
+{
+  stopFlag = true;
+}
