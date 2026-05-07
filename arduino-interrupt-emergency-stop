@@ -1,0 +1,1 @@
+An Arduino interrupt-based emergency stop system built in Thinkercad to learn real-time embedded programming concepts like ISR, attachInterrupt(), and event-driven systems.
