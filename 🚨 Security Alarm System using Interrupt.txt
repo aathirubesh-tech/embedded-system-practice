@@ -1,0 +1,41 @@
+int greenLED = 13;
+int redLED = 12;
+int buzzer = 8;
+int button = 2;
+
+volatile bool alarm = false;
+
+void setup()
+{
+  pinMode(greenLED, OUTPUT);
+  pinMode(redLED, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+  pinMode(button, INPUT);
+
+  attachInterrupt(
+    digitalPinToInterrupt(button),
+    triggerAlarm,
+    RISING
+  );
+}
+
+void loop()
+{
+  if(alarm == false)
+  {
+    digitalWrite(greenLED, HIGH);
+    digitalWrite(redLED, LOW);
+    digitalWrite(buzzer, LOW);
+  }
+  else
+  {
+    digitalWrite(greenLED, LOW);
+    digitalWrite(redLED, HIGH);
+    digitalWrite(buzzer, HIGH);
+  }
+}
+
+void triggerAlarm()
+{
+  alarm = true;
+}
