@@ -1,0 +1,83 @@
+#include <Servo.h>
+
+Servo gateServo;
+
+int trigPin = 9;
+int echoPin = 10;
+
+int greenLED = 3;
+int redLED = 4;
+
+int buzzer = 7;
+
+int servoPin = 6;
+
+unsigned long previousMillis = 0;
+const long interval = 300;
+
+void setup()
+{
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+
+  pinMode(greenLED, OUTPUT);
+  pinMode(redLED, OUTPUT);
+
+  pinMode(buzzer, OUTPUT);
+
+  gateServo.attach(servoPin);
+
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  long duration;
+  int distance;
+
+  // Ultrasonic Trigger
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+
+  digitalWrite(trigPin, LOW);
+
+  // Read Echo
+  duration = pulseIn(echoPin, HIGH);
+
+  // Distance Calculation
+  distance = duration * 0.034 / 2;
+
+  Serial.print("Distance: ");
+  Serial.println(distance);
+
+  unsigned long currentMillis = millis();
+
+  // Car Detected
+  if(distance < 20)
+  {
+    gateServo.write(90);
+
+    digitalWrite(greenLED, HIGH);
+    digitalWrite(redLED, LOW);
+
+    // Non-blocking buzzer
+    if(currentMillis - previousMillis >= interval)
+    {
+      previousMillis = currentMillis;
+
+      digitalWrite(buzzer, !digitalRead(buzzer));
+    }
+  }
+  else
+  {
+    gateServo.write(0);
+
+    digitalWrite(greenLED, LOW);
+    digitalWrite(redLED, HIGH);
+
+    digitalWrite(buzzer, LOW);
+  }
+}
