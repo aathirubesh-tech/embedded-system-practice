@@ -1,0 +1,51 @@
+🚗 Smart Car Parking System using millis() | Day 7 Practice (Tinkercad)
+
+This project is part of my Embedded Systems learning journey (Day 7).
+Built and tested using Tinkercad simulation with Arduino UNO.
+
+🔥 Project Overview
+
+A simple Smart Car Parking System that detects parking slot availability using sensors and displays real-time status.
+The main focus of this project is using millis() function instead of delay() for non-blocking execution.
+
+💡 Key Features
+🚗 Real-time parking slot detection
+⚡ Non-blocking timing using millis()
+🧠 Efficient multitasking logic
+🔧 Sensor-based simulation (IR / Ultrasonic concept)
+📊 Slot availability indication using LEDs
+🧠 Concepts Learned
+Arduino Programming Basics
+millis() function (important embedded concept)
+Sensor interfacing logic
+Real-time system thinking
+Tinkercad circuit simulation
+⚙️ Why millis()?
+
+Instead of stopping the program using delay(),
+millis() allows continuous execution of code.
+
+👉 This makes the system:
+
+Faster
+More responsive
+Real-time ready
+
+This is how real embedded systems work in industries ⚡
+
+🛠️ Tools Used
+Arduino UNO
+Tinkercad Simulation
+Embedded C
+🚀 Learning Outcome
+
+This project helped me understand:
+👉 How real-time embedded systems are designed
+👉 Importance of non-blocking code
+👉 Basics of smart parking automation systems
+
+📌 Status
+
+✔ Day 7 Practice Completed
+✔ Built in Tinkercad
+✔ Part of Embedded Learning Journey
