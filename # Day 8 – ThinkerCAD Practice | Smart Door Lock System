@@ -1,0 +1,93 @@
+# Day 8 – ThinkerCAD Practice 🔥  
+# Smart Door Lock System using Arduino UNO, Keypad, Servo Motor, NPN Transistor, and Diode
+
+## 📌 Project Overview
+This project is a password-based smart door lock system developed in ThinkerCAD using Arduino UNO.  
+The system allows secure access through a 4×4 keypad. When the correct password is entered, the servo motor rotates to simulate door unlocking. If an incorrect password is entered, the buzzer and red LED are activated as an alert system.
+
+This project was created as part of my Day 8 ThinkerCAD embedded systems practice to improve both programming and practical electronics knowledge.
+
+---
+
+## 🚀 Features
+- Password-based security system
+- Servo motor door lock mechanism
+- Green LED indication for correct password
+- Red LED and buzzer alert for wrong password
+- NPN transistor-based switching
+- Flyback diode protection circuit
+- Embedded C programming logic
+- ThinkerCAD simulation implementation
+
+---
+
+## 🧠 Concepts Learned
+- Embedded C programming
+- Arduino programming
+- Keypad interfacing
+- Servo motor control
+- NPN transistor as electronic switch
+- Flyback diode protection
+- Digital input and output handling
+- Embedded system security basics
+
+---
+
+## 🧰 Components Used
+- Arduino UNO
+- 4×4 Keypad
+- Servo Motor
+- BC547 / TIP120 NPN Transistor
+- 1N4007 Diode
+- Buzzer
+- Green LED
+- Red LED
+- Resistors
+- Breadboard
+- Jumper wires
+
+---
+
+## ⚙️ Working Principle
+1. User enters password using keypad.
+2. Arduino checks entered password.
+3. If password is correct:
+   - Green LED turns ON
+   - Servo motor rotates and unlocks the door
+4. If password is incorrect:
+   - Red LED turns ON
+   - Buzzer alert activates
+5. Transistor is used to safely control the buzzer load.
+6. Diode protects the circuit from reverse voltage spikes.
+
+---
+
+## 💻 Technologies Used
+- Embedded C
+- Arduino IDE
+- ThinkerCAD
+
+---
+
+## 🎯 Learning Outcome
+This project helped me understand how embedded programming and electronic hardware work together in real-world security applications. It also improved my practical knowledge of transistor switching and protection circuits.
+
+---
+
+## 🔥 Future Improvements
+- RFID-based access system
+- Fingerprint authentication
+- IoT monitoring
+- Mobile app control
+- LCD password display
+- Multiple user password support
+
+---
+
+## 📷 Simulation Platform
+ThinkerCAD Circuits
+
+---
+
+## 👨‍💻 Developed By
+Aathi Rubesh
