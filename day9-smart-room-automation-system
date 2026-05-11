@@ -1,0 +1,33 @@
+Smart Room Automation System
+
+This project is an Arduino-based smart room automation system designed and simulated in Tinkercad.
+
+Features
+Automatic room light control using PIR motion sensor
+Temperature-based fan automation using TMP36 sensor
+DC motor used for fan simulation
+Real-time sensor monitoring and control logic
+Components Used
+Arduino UNO
+PIR Motion Sensor
+TMP36 Temperature Sensor
+LED
+DC Motor
+NPN Transistor
+Diode
+Resistors
+Concepts Learned
+Sensor interfacing
+Embedded automation
+Motor control using transistor
+Real-time decision making
+Smart home system basics
+Simulation Platform
+
+Tinkercad Circuits
+
+Future Improvements
+Bluetooth/WiFi control
+LCD status display
+PWM fan speed control
+IoT integration
